@@ -1,0 +1,47 @@
+RULES:
+	Unless specified otherwise, only numbers are supported for operations ( for now :3 )
+
+
+BINARY OPERATORS:
+	N + N : Adds two elements together
+	N - N : Subtracts two elements
+	N * N : Multiplies two elements
+	N / N : Divides two elements
+
+
+RANGE FUNCTIONS:
+SUM(range) : Adds all the cells in range together
+MUL(range) : 
+
+
+
+TESTING:
+
+ = (1 + 2) * 2
+tokens:	(,1,+,2,),*,3
+	0,1,2,3,4,5,6
+P = 0,4
+	P X
+	E X
+	M X
+	D X
+	A = 1,+,2
+	S X
+	Result = 3
+	NewTokens = 3 * 3
+E X
+M = 3,*,3
+D X
+A X
+S X
+Result = 9
+
+ = 2*(1+2*2)
+tokens: 2,*,(,1,+,2,*,2,)
+	0,1,2,3,4,5,6,7,8
+P = 2,8
+	tokens:	1,+,2,*,2
+		0,1,2,3,4
+	P X
+	E X
+	M = 2,*,2
